@@ -1,7 +1,6 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  database: herstars
   username: root
   password: astros17
   host: <%=ENV['IP']%>
@@ -9,14 +8,9 @@ default: &default
   timeout: 5000
 
 development:
-  adapter: mysql2
-  encoding: utf8
+  <<: *default
   database: herstars
-  username: root
-  password: astros17
-  host: <%=ENV['IP']%>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
