@@ -59,3 +59,7 @@ group :test, :development do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
+
+group :development, :test do # <<<< :development, not devlopment
+  gem 'sqlite3'
+end
