@@ -3,5 +3,9 @@
   "private": true,
   "dependencies": {
     "heroku": "^0.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.0",
+    "webpack-dev-server": "^3.1.0"
   }
 }
