@@ -58,6 +58,7 @@ group :test, :development do
   gem 'database_cleaner'
 end
 
-group :development, :test do # <<<< :development, not devlopment
-  gem 'sqlite3'
-end
+# group :development, :test do # <<<< :development, not devlopment
+#   gem 'sqlite3'
+# end
+gem 'sqlite3'

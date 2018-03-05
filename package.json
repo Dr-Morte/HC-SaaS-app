@@ -1,5 +1,7 @@
 {
   "name": "HC-SaaS-app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "heroku": "^0.2.0"
+  }
 }
