@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'startup/index'
+  root 'startup#index'
 end
