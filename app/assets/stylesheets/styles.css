@@ -1,8 +1,161 @@
 body {
-    background-color: lightpink;
+    background-color: #FDF1FA;
+    margin: 0;
+    font-family: "Georgia", serif;
+}
+html { 
+  overflow-y: scroll;
 }
 
-h1 {
-    color: navy;
-    margin-left: 20px;
+pre {
+  font-family: "Georgia", serif;
 }
+
+.upper-header {
+    font-family: "Georgia", serif;
+    font-size: 50px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+}
+
+.sub-header {
+    font-family: "Georgia", serif;
+    font-size: 25px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13em;
+    font-style: italic;
+    padding-bottom: 80px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 100px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia", serif;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.intro-title {
+  font-family: "Georgia", serif;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  font-style: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.intro-subtitle {
+  font-family: "Georgia", serif;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+  padding-bottom: 50px;
+}
+
+.intro-text-home {
+  position: relative;
+  width: 35em;
+  left: 5em;
+  color: black;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  display:inline-block;
+}
+
+.widget {
+  overflow: hidden;
+  background-color: #efefef;
+  width: 300px;
+  border: 10px solid pink;
+  padding: 10px;
+  margin: 15px;
+  float: right;
+  display: inline-block;
+}
+
+.widget-sign-up-text {
+  font-family: "Georgia", serif;
+  color: black;
+  font-size: 30px;
+}
+
+.widget-sign-up-events {
+  font-family: "Georgia", serif;
+  color: black;
+  font-size: 17px;
+}
+
+.copywrite {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+table.tableSection {
+  display: table;
+  width: 100%;
+}
+
+table.tableSection thead,
+table.tableSection tbody {
+  width: 100%;
+}
+
+table.tableSection thead {
+  overflow-y: scroll;
+  display: table;
+  table-layout: fixed;
+  width: calc(100%); /* assuming scrollbar width as 16px */
+  background-color: #333;
+  color: white;
+  font-family: "Georgia", serif;
+}
+
+table.tableSection tbody {
+  overflow: auto;
+  height: 350px;
+  display: block;
+}
+
+table.tableSection tr {
+  width: 100%;
+  text-align: left;
+  display: table;
+  table-layout: fixed;
+  padding-left: 40px;
+  font-family: "Georgia", serif;
+}
+
+
