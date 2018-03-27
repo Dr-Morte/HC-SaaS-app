@@ -21,8 +21,11 @@
         <a href="/startup/index">Home</a>
         <a href="/startup/contacts">Contacts</a>
         <a href="/startup/events">Events</a>
-        <a href="/startup/profile">Profile</a>
-        <a href="/users/sign_up">Users</a>
+        <%- if user_signed_in? %>
+          <a href="/startup/profile">Profile</a>
+        <% else %>
+          <a href="/users/sign_up">Users</a>
+        <% end %>
       </div>
     </nav>
 <%=yield%>
