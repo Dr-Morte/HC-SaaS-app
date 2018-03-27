@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
+  devise_for :users
   root 'startup#index'
   get 'startup/contacts'
   get 'startup/index'
