@@ -1,7 +1,10 @@
+
+
 <section>
     <div class="intro-title">Events</div>
-    <table class="tableSection">
+    <table id = contactlist>
       <thead>
+        
         <tr>
           <th><span class="text">Name</span>
     
@@ -14,6 +17,26 @@
           </th>
         </tr>
       </thead>
+<%
+=begin %>
+      <tbody>
+        <% @contacts.each do |contact| %>
+        <tr>
+          <%# This is where each function from the user in the db will go %>
+          <td><%= contact.username %></td>
+          <td><%= contact.number %></td>
+          <td><%= contact.email%></td>
+        </tr>
+        <% end %>
+        
+<%
+=end %>
+      </tbody>
+      
+  
+  
+  
+
       <tbody>
         <tr>
           <td>Vera Taylor</td>
@@ -91,7 +114,8 @@
           <td>ea-lovesmoney@tamu.edu</td>
         </tr>
       </tbody>
+
+
+
     </table>
-
-
 </section>

@@ -1,7 +1,11 @@
-When(/^I click Create New Event$/) do
+Given /I am on the Event Creation Page/ do
     
 end
 
-Then(/^I should see the title "New Event"$/) do
-    
+When /I click "(.+)"/ do |locator|
+    page.click_link locator
+end
+
+Then(/^I should see the title "([^"]*)"$/) do |text|
+    expect(page).to have_content(text)
 end

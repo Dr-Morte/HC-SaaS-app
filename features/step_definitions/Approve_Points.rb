@@ -1,7 +1,11 @@
-When(/^I click Approve Points$/) do
+Given /I am on the Point Approval Page/ do
     
 end
 
-Then(/^I should see the title "Points Awaiting Approval"$/) do
-    
+When /I click "(.+)"/ do |locator|
+    page.click_link locator
+end
+
+Then(/^I should see the title "([^"]*)"$/) do |text|
+    expect(page).to have_content(text)
 end

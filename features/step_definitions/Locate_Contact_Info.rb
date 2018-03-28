@@ -1,7 +1,11 @@
-When(/^I click Contact$/) do
-    
+Given /I am on the "(.+)"/ do |page_a|
+    expect(page_a).to eq(Home Page)
 end
 
-Then(/^I should see the title "Members"$/) do
-    
+When /I click "(.+)"/ do |locator|
+    page.click_link locator
+end
+
+Then(/^I should see the title "([^"]*)"$/) do |text|
+    expect(page).to have_content(text)
 end
