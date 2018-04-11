@@ -1,12 +1,12 @@
-Given /^I am on the Login Page$/ do
+Given (/^I am on the Login Page$/) do
     visit root_path
 end
 
 
-When /I click "(.+)"/ do |locator|
-    page.click_link locator
+When (/^I click Login/) do
+    page.click_link Login
 end
 
-Then(/^I should see the title "([^"]*)"$/) do |text|
-    expect(page).to have_content(text)
+Then(/^I should see the title Her Stars/) do
+    expect(page).to have_content(Her Stars)
 end

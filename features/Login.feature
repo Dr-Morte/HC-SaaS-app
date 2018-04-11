@@ -5,4 +5,4 @@ Background:
 
 Scenario: Clicking Login
 	When I click Login
-	Then I should see the title "Her Stars"
+	Then I should see the title Her Stars

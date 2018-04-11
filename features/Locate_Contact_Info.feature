@@ -4,5 +4,5 @@ Background:
 		Given I am on the Home Page
 
 Scenario: Clicking Contact Button
-	When I click Contact
-	Then I should see the title "Members"
+	When I go to contact
+	Then I should see a contact

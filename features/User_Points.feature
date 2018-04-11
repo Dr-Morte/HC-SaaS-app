@@ -5,4 +5,4 @@ Background:
 
 Scenario: Clicking Login
 	When I click Profile
-	Then I should see the title "Profile"
+	Then I should see the title Profile

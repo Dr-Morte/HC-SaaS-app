@@ -1,11 +1,7 @@
-Given /I am on the "(.+)"/ do |page_a|
-    expect(page_a).to eq(Home Page)
+When(/^I go to contact/) do
+  visit startup/contacts
 end
 
-When /I click "(.+)"/ do |locator|
-    page.click_link locator
-end
-
-Then(/^I should see the title "([^"]*)"$/) do |text|
-    expect(page).to have_content(text)
+Then(/^I should see a contact/) do
+  expect(page).to have_content("Cthulhu")
 end

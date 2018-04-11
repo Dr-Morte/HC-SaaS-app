@@ -1,11 +1,11 @@
-Given /I am on the "(.+)"/ do |page_a|
-    expect(page_a).to eq("Home Page")
+Given (/^I am on the Home Page/) do
+    visit root_path
 end
 
-When /I click on an "(.+)" on the Widget/ do |locator|
-    page.click_link locator
+When (/^I click an Event on the Widget/) do
+    #page.click_link locator
 end
 
-Then(/^I should see the title  "([^"]*)"$/) do |locator|
-    expect(page).to have_content(text)
+Then(/^I should see the title Events/) do
+    expect(page).to have_content(Events)
 end

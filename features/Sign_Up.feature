@@ -5,4 +5,4 @@ Background:
 
 Scenario: Clicking Sign Up
 	When I click Sign Up
-	Then I should see the title "Events Sign Up"
+	Then I should see the title Events Sign Up

@@ -1,11 +1,9 @@
-Given /I am on the Event Creation Page/ do
-    
+# features/step_definitions/Create.rb
+
+When(/^I visit Events/) do
+  visit startup/events
 end
 
-When /I click "(.+)"/ do |locator|
-    page.click_link locator
-end
-
-Then(/^I should see the title "([^"]*)"$/) do |text|
-    expect(page).to have_content(text)
+Then(/^I should see an event/) do
+  expect(page).to have_content("Wolf Pen Creek")
 end

@@ -1,8 +1,9 @@
-
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 
 <section>
-    <div class="intro-title">Events</div>
-    <table id = contactlist>
+    <div class="intro-title">Contacts</div>
+    <table id = contactlist class="tableSection">
       <thead>
         
         <tr>
@@ -17,26 +18,26 @@
           </th>
         </tr>
       </thead>
-<%
-=begin %>
+
       <tbody>
-        <% @contacts.each do |contact| %>
+        <% @users.each do |user|%>
         <tr>
           <%# This is where each function from the user in the db will go %>
-          <td><%= contact.username %></td>
-          <td><%= contact.number %></td>
-          <td><%= contact.email%></td>
+          <td><%= user.username %></td>
+          <td><%= user.current_sign_in_at%></td>
+          <%# I didn't find anything in the db about storing a user's phone number %>
+          <td><%= user.email%></td>
         </tr>
         <% end %>
-        
-<%
-=end %>
       </tbody>
+      
+
       
   
   
   
-
+<%
+=begin %>
       <tbody>
         <tr>
           <td>Vera Taylor</td>
@@ -114,7 +115,9 @@
           <td>ea-lovesmoney@tamu.edu</td>
         </tr>
       </tbody>
-
+      
+      <%
+=end %>
 
 
     </table>

@@ -5,4 +5,4 @@ Background:
 
 Scenario: See Widget
 	When I click an Event on the Widget
-	Then I should see the title "Events"
+	Then I should see the title Events

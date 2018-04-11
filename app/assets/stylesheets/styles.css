@@ -12,6 +12,10 @@ pre {
   font-family: "The Girl Next Door", sans-serif;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .upper-header {
     font-family: "The Girl Next Door", sans-serif;
     font-size: 50px;
@@ -161,4 +165,117 @@ table.tableSection tr {
 
 #login, #signup {
   text-align: center;
+}
+
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  body {
+    max-width: 100%;
+    min-height: 400px;
+    clear: both;
+    overflow-x: hidden;
+  }
+  
+  .dropdown {
+    display: inline;
+  }
+  
+  .w3-dropdown-click {
+    display: inline;
+  }
+  
+  .w3-dropdown-content {
+    min-width: 400px;
+  }
+  
+  .w3-bar-item {
+    width: 5%;
+    padding-top: 5%;
+    margin-left: 40%
+  }
+  
+  .w3-button:hover {
+    background-color: transparent!important;
+  }
+  
+  .header {
+    max-width: 45%;;
+    margin: 0;
+    font-size: .5em;
+    margin-left: 3%;
+    display: inline-block;
+  }
+  
+  .upper-header {
+    font-size: 3.5em;
+    margin-left: 5%;
+  }
+  
+  .sub-header {
+    font-size: 1.5em;
+    margin-top: -5%;
+    margin-left: 0;
+    padding-bottom: 5%;
+  }
+  
+  .hamburgerIcon {
+    max-width: 25%;
+    display: inline-block;
+    float: right;
+  }
+  
+  #mainNav {
+    display: none;
+  }
+  
+  section {
+    max-width: 100%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .intro-text-home {
+    width: 90%;
+    left: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.25em;
+    text-align: center;
+  }
+  
+  .widget {
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+    margin-bottom: 10%;
+  }
+  
+  footer {
+    bottom: 0;
+    height: 2em;
+    left: 0;
+    font-size: small;
+    width:100%;
+    text-align: center;
+    color: white;
+  }
+  
+  .intro-title {
+    width:100%;
+  }
+  
+  thead {
+    width: 100%;
+  }
+  
+  tbody tr {
+    border-bottom: 2px solid #333;
+  }
+  
+  tbody tr td {
+    max-width: 10%;
+  }
 }

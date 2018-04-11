@@ -8,7 +8,6 @@ end
 
 
 gem 'rails-assets-jquery', source: 'http://rails-assets.org'
-gem 'rails-assets-datatables', source: 'http://rails-assets.org'
 gem 'devise'
 #mysql gem 0.4.4
 gem 'mysql2', '~> 0.4.10'

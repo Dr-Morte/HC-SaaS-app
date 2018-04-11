@@ -1,12 +1,11 @@
-Given /I am on the "(.+)"/ do |page_a|
-    expect(page_a).to eq(Event Sign Up Page)
+Given /I am on the Event Sign Up Page/ do
+    
 end
 
-
-When /I click "(.+)"/ do
-   page.click_link locator
+When (/^I click Sign Up/) do
+   page.click_link Sign Up
 end
 
-Then(/^I should see the title "([^"]*)"$/) do |text|
-    expect(page).to have_content(text)
+Then(/^I should see the title Events Sign Up/) do
+    expect(page).to have_content(Events Sign Up)
 end
