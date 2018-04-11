@@ -6,6 +6,14 @@
   </div>
   <div class="widget">
     <p class="widget-sign-up-text">Sign Up!</p>
-    <p class="widget-sign-up-events">events go here</p>
+    <p <% @events.each do |event|%>
+        <tr>
+          <%# This is where each function from the user in the db will go %>
+          <td><%= event.name %>
+            <pre><%= event.desc%></pre>
+          </td>
+          <td><%= event.time %>
+            <pre><%= event.day%></pre>
+    </p>
   </div>
 </section>
