@@ -8,10 +8,10 @@ end
 
 
 group :test do
-  gem 'simplecov', :require => false
+  
 end
 
-
+gem 'simplecov', require: false
 gem 'rails-assets-jquery', source: 'http://rails-assets.org'
 gem 'devise'
 #mysql gem 0.4.4
