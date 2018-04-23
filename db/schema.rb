@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20180412032552) do
     t.datetime "updated_at", null: false
     t.string "phone"
     t.string "attending"
-    t.integer "stars"
+    t.integer "stars", default: 2
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
