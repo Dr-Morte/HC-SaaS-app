@@ -1,6 +1,3 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-
 <section>
     <div class="intro-title">Contacts</div>
     <table id = contactlist class="tableSection">
@@ -16,6 +13,10 @@
           <th><span class="text">Email</span>
     
           </th>
+          </th>
+          <th><span class="text">Admin?</span>
+          
+          </th>
         </tr>
       </thead>
 
@@ -24,9 +25,10 @@
         <tr>
           <%# This is where each function from the user in the db will go %>
           <td><%= user.username %></td>
-          <td><%= user.current_sign_in_at%></td>
+          <td>#: <%= user.phone%></td>
           <%# I didn't find anything in the db about storing a user's phone number %>
           <td><%= user.email%></td>
+          <td><%= user.admin%></td>
         </tr>
         <% end %>
       </tbody>

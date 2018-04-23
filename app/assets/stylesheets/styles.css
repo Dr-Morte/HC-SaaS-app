@@ -1,8 +1,11 @@
 body {
     background-color: #ffa8d0;
     margin: 0;
+    text-align: center;
     color: white;
+    font-size: 30px;
     font-family: "The Girl Next Door", sans-serif;
+    
 }
 html { 
   overflow-y: scroll;
@@ -10,6 +13,13 @@ html {
 
 pre {
   font-family: "The Girl Next Door", sans-serif;
+  font-size: 30px;
+}
+
+  h2 {
+  font-family: "The Girl Next Door", sans-serif;
+  color: white;
+  font-size: 30px;
 }
 
 .header a {
@@ -18,7 +28,7 @@ pre {
 
 .upper-header {
     font-family: "The Girl Next Door", sans-serif;
-    font-size: 50px;
+    font-size: 100px;
     color: white;
     margin-left: auto;
     margin-right: auto;
@@ -143,7 +153,7 @@ table.tableSection thead {
   display: table;
   table-layout: fixed;
   width: calc(100%); /* assuming scrollbar width as 16px */
-  background-color: #333;
+  background-color: #f95ea6;
   color: white;
   font-family: "The Girl Next Door", sans-serif;
 }
@@ -202,6 +212,7 @@ table.tableSection tr {
   }
   
   .header {
+    
     max-width: 45%;;
     margin: 0;
     font-size: .5em;

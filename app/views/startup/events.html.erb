@@ -2,17 +2,26 @@
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 
-
-
 <section>
     <div class="intro-title">Events</div>
+    <div class="intro-subtitle">Sign Up For Events Here</div>
+    <!--<button--> 
     <table class="tableSection">
       <thead>
         <tr>
           <th><span class="text">Where</span>
     
           </th>
-          <th><span class="text">When</span>
+          <th><span class="text">What</span>
+    
+          </th>
+          <th><span class="text">When(Time)</span>
+    
+          </th>
+          <th><span class="text">When(Day)</span>
+    
+          </th>
+          <th><span class="text">Stars</span>
     
           </th>
           <th><span class="text">Sign Up!</span>
@@ -20,21 +29,16 @@
           </th>
         </tr>
       </thead>
-      
-      
       <tbody>
         <% @events.each do |event|%>
         <tr>
           <%# This is where each function from the user in the db will go %>
-          <td><%= event.name %>
-            <pre><%= event.desc%></pre>
-          </td>
-          <td><%= event.time %>
-            <pre><%= event.day%></pre>
-          </td>
-          <td><a href="https://tinyurl.com/j8jxawj">Sign Up!</a>
-            <pre><%= event.stars%></pre>
-          </td>
+          <td><%= event.name %></td>
+          <td><%= event.desc%></td>
+          <td><%= event.time %></td>
+          <td><%= event.day%></td>
+          <td><%= event.stars%></td>
+          <td><a href="profile.htm">Sign Up!</td>
         </tr>
         <% end %>
          </tbody>

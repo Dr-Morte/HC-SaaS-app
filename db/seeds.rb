@@ -24,8 +24,8 @@
         Event.create!(event)
     end
     
-    users = [{:username => 'Cthulhu', :password => "ocean1", :current_sign_in_at => '2:00', :email => 'deadcthulhuwaitsdreaming@tamu.edu'},
-                {:username => 'Hannibal Lecter', :password => "dinner", :current_sign_in_at => '1:00', :email => 'notapsychopath@aol.com'}]    
+    users = [{:username => 'Cthulhu', :password => "ocean1", :phone => "555-555-5556", :email => 'deadcthulhuwaitsdreaming@tamu.edu'},
+                {:username => 'Hannibal Lecter', :password => "dinner", :phone => '555-555-5557', :email => 'notapsychopath@aol.com'}]    
     users.each do |user|
         User.create!(user)
     end

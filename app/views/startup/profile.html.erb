@@ -1,7 +1,7 @@
 <section>
     
-    <div class="intro-title">Hello, <%= current_user.email %></div>
-    <div class="intro-subtitle">Total Stars: 9001</div>
+    <div class="intro-title">Hello, <%= current_user.username %></div>
+    <div class="intro-subtitle">Total Stars: <%= current_user.stars %></div>
     <table class="tableSection">
       <thead>
         <tr>
@@ -24,7 +24,16 @@
           </td>
         </tr>
       </tbody>
+      
     </table>
+    
+    <!-- need to change method to post to protect key info -->
+    <form method="get">
+      Are you an Admin? <br>
+      Input Admin key here : <br>
+      <input type="text" name = "adminkey"><br>
+      <input type="submit" value="Submit"><br>
+    </form>
 
 
 </section>
