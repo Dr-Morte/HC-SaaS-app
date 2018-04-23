@@ -9,8 +9,7 @@
     <p class="widget-sign-up-events">events</p>
     
     <tbody>
-      <% 3.times do %>
-          <% @events.each do |event|%>
+          <% @events.first(4).each do |event|%>
           <tr>
             <%# This is where each function from the user in the db will go %>
             <td>
@@ -28,7 +27,6 @@
             </td>
           </tr>
           <% end %>
-        <% end %>
       </tbody>
     
   </div>
