@@ -9,25 +9,27 @@
     <p class="widget-sign-up-events">events</p>
     
     <tbody>
-        <% @events.each do |event|%>
-        <tr>
-          <%# This is where each function from the user in the db will go %>
-          <td>
-            <%= event.name %>
-            <pre><%= event.day%></pre>
+      <% 3.times do %>
+          <% @events.each do |event|%>
+          <tr>
+            <%# This is where each function from the user in the db will go %>
             <td>
-             <%= event.time %>
+              <%= event.name %>
+              <pre><%= event.day%></pre>
+              <td>
+               <%= event.time %>
+              </td>
+              <pre><%= event.stars%> stars</pre>
+              <pre><a href="https://tinyurl.com/j8jxawj">Sign Up!</a></pre>
             </td>
-            <pre><%= event.stars%> stars</pre>
-            <pre><a href="https://tinyurl.com/j8jxawj">Sign Up!</a></pre>
-          </td>
-           <p class="devider">-------------------</p>
-          <td>
-            
-          </td>
-        </tr>
+             <p class="devider">-------------------</p>
+            <td>
+              
+            </td>
+          </tr>
+          <% end %>
         <% end %>
-         </tbody>
+      </tbody>
     
   </div>
 </section>
