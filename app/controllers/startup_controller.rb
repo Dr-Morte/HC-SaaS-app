@@ -1,7 +1,7 @@
 class StartupController < ApplicationController
   def index
     @events = Event.all
-    @event1 = Event.find(1,2,3)
+    #@event1 = Event.find(1,2,3)
   end
   
   def events
