@@ -2,38 +2,40 @@
     
     <div class="intro-title">Hello, <%= current_user.username %></div>
     <div class="intro-subtitle">Total Stars: <%= current_user.stars %></div>
-    <table class="tableSection">
-      <thead>
-        <tr>
-          <th><span class="text">What</span>
-    
-          </th>
-          <th><span class="text">Date</span>
-    
-          </th>
-          <th><span class="text">Stars Obtained</span>
-    
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Wolf Pen Creek Park</td>
-          <td>7/7/2018</td>
-          <td>Stars: 2</pre>
-          </td>
-        </tr>
-      </tbody>
+    <% if current_user.admin == false %>
+      <table class="tableSection">
+        <thead>
+          <tr>
+            <th><span class="text">What</span>
       
-    </table>
-    
-    <!-- need to change method to post to protect key info -->
-    <form method="get">
-      Are you an Admin? <br>
-      Input Admin key here : <br>
-      <input type="text" name = "adminkey"><br>
-      <input type="submit" value="Submit"><br>
-    </form>
-
+            </th>
+            <th><span class="text">Date</span>
+      
+            </th>
+            <th><span class="text">Stars Obtained</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wolf Pen Creek Park</td>
+            <td>7/7/2018</td>
+            <td>Stars: 2</pre>
+            </td>
+          </tr>
+        </tbody>
+        
+      </table>
+      
+      <!-- need to change method to post to protect key info -->
+      <form method="get">
+        Are you an Admin? <br>
+        Input Admin key here : <br>
+        <input type="text" name = "adminkey"><br>
+        <input type="submit" value="Submit"><br>
+      </form>
+    <% elsif current_user.admin == true %>
+      <!-- admin queue goes here -->
+    <% end %>
 
 </section>
