@@ -17,15 +17,15 @@
 #       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
 #   	 ]
 
-
+    #defalts for events
     events = [{:name => 'Wolf Pen Creek', :time => '2:00', :desc => 'fun party time', :day => "Friday", :stars => 1},
                 {:name => 'Annex', :time => '1:00', :desc => 'study time', :day => "Thursday", :stars => 9001}]    
     events.each do |event|
         Event.create!(event)
     end
     
-    users = [{:username => 'Cthulhu', :password => "ocean1", :phone => "555-555-5556", :email => 'deadcthulhuwaitsdreaming@tamu.edu'},
-                {:username => 'Hannibal Lecter', :password => "dinner", :phone => '555-555-5557', :email => 'notapsychopath@aol.com'}]    
+    #defalt for user info
+    users = [{:username => 'Knight Solaire', :password => "praisethesun", :phone => "555-555-5559", :email => 'praisethesun@tamu.edu', :stars => 8, :admin => true}]    
     users.each do |user|
         User.create!(user)
     end

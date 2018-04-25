@@ -1,2 +1,2 @@
-module StartupHelper
+module StartupHelper #not used
 end

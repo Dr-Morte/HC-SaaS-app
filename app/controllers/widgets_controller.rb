@@ -1,32 +1,33 @@
 class WidgetsController < ApplicationController
+  #widget varables
   before_action :set_widget, only: [:show, :edit, :update, :destroy]
 
   # GET /widgets
   # GET /widgets.json
-  def index
+  def index #creates widgets on the main page
     @widgets = Widget.all
   end
 
   # GET /widgets/1
   # GET /widgets/1.json
-  def show
+  def show #for future use
   end
 
   # GET /widgets/new
-  def new
+  def new #widget creation on page
     @widget = Widget.new
   end
 
   # GET /widgets/1/edit
-  def edit
+  def edit #for future use
   end
 
   # POST /widgets
   # POST /widgets.json
-  def create
+  def create #constructer
     @widget = Widget.new(widget_params)
 
-    respond_to do |format|
+    respond_to do |format| #check if creation is done correctly 
       if @widget.save
         format.html { redirect_to @widget, notice: 'Widget was successfully created.' }
         format.json { render :show, status: :created, location: @widget }
@@ -40,7 +41,7 @@ class WidgetsController < ApplicationController
   # PATCH/PUT /widgets/1
   # PATCH/PUT /widgets/1.json
   def update
-    respond_to do |format|
+    respond_to do |format| #check if update was done correctly is done correctly 
       if @widget.update(widget_params)
         format.html { redirect_to @widget, notice: 'Widget was successfully updated.' }
         format.json { render :show, status: :ok, location: @widget }
@@ -55,7 +56,7 @@ class WidgetsController < ApplicationController
   # DELETE /widgets/1.json
   def destroy
     @widget.destroy
-    respond_to do |format|
+    respond_to do |format| #delete the widgets
       format.html { redirect_to widgets_url, notice: 'Widget was successfully destroyed.' }
       format.json { head :no_content }
     end

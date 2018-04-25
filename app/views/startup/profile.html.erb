@@ -1,12 +1,12 @@
 <section>
     
-    <div class="intro-title">Hello, <%= current_user.username %></div>
-    <div class="intro-subtitle">Total Stars: <%= current_user.stars %></div>
+    <div class="intro-title">Hello, <%= current_user.username %></div> <%#= displays username %>
+    <div class="intro-subtitle">Total Stars: <%= current_user.stars %></div> <%#= total stars earned by user %>
     <% if current_user.admin == false %>
       <table class="tableSection">
         <thead>
-          <tr>
-            <th><span class="text">What</span>
+          <tr> <%#= column headers for event description, date and stars obtained %>
+            <th><span class="text">event Description</span>
       
             </th>
             <th><span class="text">Date</span>
@@ -16,25 +16,20 @@
             </th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Wolf Pen Creek Park</td>
-            <td>7/7/2018</td>
-            <td>Stars: 2</pre>
-            </td>
-          </tr>
-        </tbody>
-        
+         
+        <td>Wolfpen Creek</td>
+        <td>11/13/2018</td>
+        <td>0</td>
       </table>
       
       <!-- need to change method to post to protect key info -->
-      <form method="get">
+      <form method="get">  <%#= not currently implemented %>
         Are you an Admin? <br>
         Input Admin key here : <br>
         <input type="text" name = "adminkey"><br>
         <input type="submit" value="Submit"><br>
       </form>
-    <% elsif current_user.admin == true %>
+    <% else %>
       <!-- admin queue goes here -->
     <% end %>
 

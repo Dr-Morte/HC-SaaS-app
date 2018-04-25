@@ -1,27 +1,27 @@
 <section>
-  <div class="intro-text-home"> 
+  <div class="intro-text-home"> <%#= welcome message and reason for website %>
     <p>Welcome to Her Stars! 
                           This is where you can find upcoming events, find
                           other members, and track your attendance.</p>
   </div>
-  <div class="widget">
+  <div class="widget"> <%#= create widget that hold the first three events %>
     <p class="widget-sign-up-text">Sign Up!</p>
     <p class="widget-sign-up-events">events</p>
     
     <tbody>
-          <% @events.first(3).each do |event|%>
-          <tr>
+          <% @events.first(3).each do |event|%> <%#= for the first three events %>
+          <tr> <%#= display discription, day of event, time, and star %>
             <%# This is where each function from the user in the db will go %>
-            <td>
+            <td> 
               <%= event.name %>
               <pre><%= event.day%></pre>
               <td>
                <%= event.time %>
               </td>
               <pre><%= event.stars%> stars</pre>
-              <pre><a href="https://tinyurl.com/j8jxawj">Sign Up!</a></pre>
+              <pre><a href="/startup/events">Sign Up!</a></pre> <%#= when pressed go to events page %>
             </td>
-             <p class="devider">-------------------</p>
+             <p class="divider">-------------------</p>
             <td>
               
             </td>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412032552) do
+ActiveRecord::Schema.define(version: 20180424233827) do
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20180412032552) do
     t.datetime "updated_at", null: false
   end
 
+  #table varables for user data
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -37,8 +38,8 @@ ActiveRecord::Schema.define(version: 20180412032552) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "phone"
-    t.string "attending"
-    t.integer "stars", default: 2
+    t.integer "attending"
+    t.integer "stars"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

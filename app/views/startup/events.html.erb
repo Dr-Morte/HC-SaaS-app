@@ -1,24 +1,81 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+<%#= pulls event from and adds events to database table%>
+
 
 <section>
-    <div class="intro-title">Events</div>
-    <div class="intro-subtitle">Sign Up For Events Here</div>
-    <!--<button--> 
-    <table class="tableSection">
-      <thead>
+    <%#=<div class="intro-title">Events</div>%>
+    <div class="blank space">.</div>
+    <div class="intro-subtitle">Sign Up For Events Here</div> <%#= instructions for page usage %>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">New Event</button>  <%#= allow the adding of a new event to database table %>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" style="color:black">
+        <span class="close">&times;</span>
+        
+          <!--Should send all data entry to startup_controller.rb-->
+        Place<br>
+        <input type="text">
+        <br>
+        Type of Event<br>
+        <input type="text">
+        <br>
+        Time<br>
+        <input type="text">
+        <br>
+        Day<br>
+        <input type="text">
+        <br>
+        Stars<br>
+        <input type="text"><br><br>
+        <input id="sub" type="submit" value="Submit">
+        <br><br>
+      </div>
+    
+    </div>
+    <script>
+      var modal = document.getElementById('myModal');
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      var sub = document.getElementById("sub");
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      sub.onclick = function() {
+          modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      // function updateItem(place, type, time, day, stars) {
+      //   var e = document.getElementById(item);
+      //   var val = e.options[e.selectedIndex].value; 
+      //   new Ajax.Request('/startup/update_event_table', { 
+      //                 method: 'post',
+      //                 parameters: { selected_id: item, u_id: userID, job_id: jobID }
+      //               });
+    </script>
+    <table class="tableSection"> 
+      <thead> <%#= column headers for event information%>
         <tr>
           <th><span class="text">Where</span>
     
           </th>
-          <th><span class="text">What</span>
+          <th><span class="text">Description</span>
     
           </th>
-          <th><span class="text">When(Time)</span>
+          <th><span class="text">When</span>
     
           </th>
-          <th><span class="text">When(Day)</span>
+          <th><span class="text">Date</span>
     
           </th>
           <th><span class="text">Stars</span>
@@ -30,7 +87,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @events.each do |event|%>
+        <% @events.each do |event|%> <%#= for each event display name, description, time, day, and stars %>
         <tr>
           <%# This is where each function from the user in the db will go %>
           <td><%= event.name %></td>
@@ -38,19 +95,15 @@
           <td><%= event.time %></td>
           <td><%= event.day%></td>
           <td><%= event.stars%></td>
-          <td><a href="profile.htm">Sign Up!</td>
-        </tr>
+          <td><%= link_to "Sign Up!", { :controller => "startup", :method => :put, :action => "sign_up_action" } %></td>
+        </tr> <%#= when sign up is pressed the stars and event discription and date are sent to the user %>
         <% end %>
          </tbody>
       
       
-      
-      
-      
-      
-      
+
       <%
-=begin %>
+=begin %> //example data, outdated
       
       <tbody>
         <tr>

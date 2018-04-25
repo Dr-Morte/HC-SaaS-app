@@ -1,27 +1,29 @@
-<h2>Sign up</h2>
+<h2>Sign up</h2> <%#= sign up for an account%>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
-  
+  <%#= allows the user to create a name that they will be identifed by%>
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username, autocomplete: "off" %>
-    <%#= validates_format_of :username, :with => /^(([\d\W]|[-])*$)/ %>
+    <%#= validates_format_of :username, :with => /^(([\d\W]|[-])*$)/ %> <%#= broken not working%>
   </div>
   
   <div class="field">
     <%= f.label :phone %><br />
     <%= f.text_field :phone, autocomplete: "off" %>
     <%#= validates_format_of :phone, :with => /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}/ %>
-    <%#= validates_format_of :phone, :with => /[0-9]{3}-[0-9]{3}-[0-9]{4}/ %>
+    <%#= validates_format_of :phone, :with => /[0-9]{3}-[0-9]{3}-[0-9]{4}/ %> <%#= broken not working %>
   </div>
   
+  <%#= allows the user to enter their email for their account%>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %> <%#= allows the auto complete of already added emails%>
   </div>
-
+  
+  <%#= allow the user to create a password for account of at 6 character length%>
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -30,11 +32,13 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
+  <%#= has enter the exact password they just entered%>
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
+  
+  <%#= sign up button %>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

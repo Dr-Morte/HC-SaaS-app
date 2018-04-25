@@ -1,2 +1,2 @@
-module WidgetsHelper
+module WidgetsHelper #not used
 end

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <%#= page header %>
     <title>Her Stars</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <%= csrf_meta_tags %>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <nav id="mainNav">
-      <div class="topnav">
+      <div class="topnav"> <%#= page links on each page %>
         <a href="/startup/index">Home</a>
         <a href="/startup/contacts">Contacts</a>
         <a href="/startup/events">Events</a>
@@ -50,11 +50,23 @@
         </div>
     </nav>
 <%=yield%>
-    <footer>
+
+  <style> <%#= put footer at bottom of screen%>
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: medium;
+    width:100%;
+    text-align: center;
+    color: white;
+  }
+  </style>
+    <div class="footer"> <%#= the text of the footer%>
         <p>Copyright &copy; Her Stars 2018</p>
-    </footer>
+    </div>
     <script>
-function myFunction() {
+function myFunction() { <%#= not used presently %>
     var x = document.getElementById("demo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";

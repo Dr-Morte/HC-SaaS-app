@@ -1,9 +1,9 @@
-<section>
+<section> <%#= the contacts page %> 
     <div class="intro-title">Contacts</div>
     <table id = contactlist class="tableSection">
       <thead>
         
-        <tr>
+        <tr> <%#= titles of the columns of contact information: name, phone number, Email, and if admin %>
           <th><span class="text">Name</span>
     
           </th>
@@ -20,7 +20,7 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody> <%#= for each user places their information in the proper column %>
         <% @users.each do |user|%>
         <tr>
           <%# This is where each function from the user in the db will go %>
@@ -40,7 +40,7 @@
   
 <%
 =begin %>
-      <tbody>
+      <tbody> example data
         <tr>
           <td>Vera Taylor</td>
           <td>555-555-5555</td>
